@@ -35,7 +35,7 @@ class RailsEmailPreview::EmailsController < ::RailsEmailPreview::ApplicationCont
         end
         body = body_part.body
         if body_part.content_type =~ /plain/
-          body = "<pre id='message_body'>#{body}</body>"
+          body = "<pre id='message_body' style='font-family: consolas; font-size: 80%;'>#{body}</body>"
         end
       end
       render text: body, layout: false
